@@ -1,0 +1,65 @@
+2026-09-20 23:40:28,134 - src.data_loader - INFO - Downloaded dataset to F:\Code\data\telco_churn.csv
+2026-09-20 23:40:28,157 - src.data_loader - INFO - Loaded 7043 rows x 21 cols | churn rate: 26.54%
+2026-09-20 23:40:28,161 - src.preprocessing - INFO - Missing values (raw data): none
+2026-09-20 23:40:28,167 - src.preprocessing - INFO - Missing values (after converting TotalCharges):
+TotalCharges    11
+2026-09-20 23:40:28,177 - src.preprocessing - INFO - Removed duplicates: 22
+2026-09-20 23:40:28,181 - src.preprocessing - INFO - Removed rows with missing values: 11
+2026-09-20 23:40:28,213 - src.preprocessing - INFO - Preprocessing completed
+2026-09-20 23:40:28,213 - src.preprocessing - INFO - X shape: (7010, 26)
+2026-09-20 23:40:28,213 - src.preprocessing - INFO - y shape: (7010,)
+2026-09-20 23:40:28,213 - src.preprocessing - INFO - Categorical columns (not scaled): ['gender', 'Partner', 'Dependents', 'PhoneService', 'PaperlessBilling', 'MultipleLines', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'InternetService_DSL', 'InternetService_Fiber optic', 'InternetService_No', 'Contract_Month-to-month', 'Contract_One year', 'Contract_Two year', 'PaymentMethod_Bank transfer (automatic)', 'PaymentMethod_Credit card (automatic)', 'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check']
+2026-09-20 23:40:28,214 - src.preprocessing - INFO - Columns to scale (4): ['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges']
+2026-09-20 23:40:28,214 - src.preprocessing - INFO - Columns not scaled (22): ['gender', 'Partner', 'Dependents', 'PhoneService', 'PaperlessBilling', 'MultipleLines', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'InternetService_DSL', 'InternetService_Fiber optic', 'InternetService_No', 'Contract_Month-to-month', 'Contract_One year', 'Contract_Two year', 'PaymentMethod_Bank transfer (automatic)', 'PaymentMethod_Credit card (automatic)', 'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check']
+2026-09-20 23:40:28,216 - src.preprocessing - INFO - Train shape: (5608, 26), test shape: (1402, 26)
+2026-09-20 23:40:28,220 - src.preprocessing - INFO - Scaling completed (numeric columns only)
+2026-09-20 23:40:28,244 - src.train - INFO - Trained Logistic Regression in 0.02s
+2026-09-20 23:40:28,252 - src.train - INFO - Evaluated Logistic Regression | accuracy=0.7397 | precision=0.4610 | recall=0.8100 | f1=0.5876 | roc_auc=0.8516
+2026-09-20 23:40:29,321 - src.train - INFO - Trained Random Forest in 0.43s
+2026-09-20 23:40:29,386 - src.train - INFO - Evaluated Random Forest | accuracy=0.7639 | precision=0.4898 | recall=0.7445 | f1=0.5909 | roc_auc=0.8421
+2026-09-20 23:47:37,174 - src.data_loader - INFO - Loaded 7043 rows x 21 cols | churn rate: 26.54%
+2026-09-20 23:47:37,178 - src.preprocessing - INFO - Missing values (raw data): none
+2026-09-20 23:47:37,184 - src.preprocessing - INFO - Missing values (after converting TotalCharges):
+TotalCharges    11
+2026-09-20 23:47:37,192 - src.preprocessing - INFO - Removed duplicates: 22
+2026-09-20 23:47:37,196 - src.preprocessing - INFO - Removed rows with missing values: 11
+2026-09-20 23:47:37,258 - src.preprocessing - INFO - Preprocessing completed
+2026-09-20 23:47:37,258 - src.preprocessing - INFO - X shape: (7010, 26)
+2026-09-20 23:47:37,258 - src.preprocessing - INFO - y shape: (7010,)
+2026-09-20 23:47:37,258 - src.preprocessing - INFO - Categorical columns (not scaled): ['gender', 'Partner', 'Dependents', 'PhoneService', 'PaperlessBilling', 'MultipleLines', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'InternetService_DSL', 'InternetService_Fiber optic', 'InternetService_No', 'Contract_Month-to-month', 'Contract_One year', 'Contract_Two year', 'PaymentMethod_Bank transfer (automatic)', 'PaymentMethod_Credit card (automatic)', 'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check']
+2026-09-20 23:47:37,258 - src.preprocessing - INFO - Columns to scale (4): ['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges']
+2026-09-20 23:47:37,258 - src.preprocessing - INFO - Columns not scaled (22): ['gender', 'Partner', 'Dependents', 'PhoneService', 'PaperlessBilling', 'MultipleLines', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'InternetService_DSL', 'InternetService_Fiber optic', 'InternetService_No', 'Contract_Month-to-month', 'Contract_One year', 'Contract_Two year', 'PaymentMethod_Bank transfer (automatic)', 'PaymentMethod_Credit card (automatic)', 'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check']
+2026-09-20 23:47:37,261 - src.preprocessing - INFO - Train shape: (5608, 26), test shape: (1402, 26)
+2026-09-20 23:47:37,265 - src.preprocessing - INFO - Scaling completed (numeric columns only)
+2026-09-20 23:47:37,288 - src.train - INFO - Trained Logistic Regression in 0.02s
+2026-09-20 23:47:37,295 - src.train - INFO - Evaluated Logistic Regression | accuracy=0.7397 | precision=0.4610 | recall=0.8100 | f1=0.5876 | roc_auc=0.8516
+2026-09-20 23:47:38,158 - src.train - INFO - Trained Random Forest in 0.42s
+2026-09-20 23:47:38,222 - src.train - INFO - Evaluated Random Forest | accuracy=0.7639 | precision=0.4898 | recall=0.7445 | f1=0.5909 | roc_auc=0.8421
+2026-09-20 23:47:39,884 - src.train - INFO - Trained Gradient Boosting in 1.17s
+2026-09-20 23:47:39,892 - src.train - INFO - Evaluated Gradient Boosting | accuracy=0.7561 | precision=0.4804 | recall=0.8006 | f1=0.6005 | roc_auc=0.8511
+2026-09-20 23:47:44,328 - src.train - INFO - Trained SVM (RBF) in 4.00s
+2026-09-20 23:47:44,591 - src.train - INFO - Evaluated SVM (RBF) | accuracy=0.7946 | precision=0.5433 | recall=0.6449 | f1=0.5897 | roc_auc=0.8209
+2026-09-20 23:47:44,930 - src.train - INFO - Best model by roc_auc: Logistic Regression (0.8516)
+2026-09-21 02:01:40,119 - src.data_loader - INFO - Loaded 7043 rows x 21 cols | churn rate: 26.54%
+2026-09-21 02:01:40,134 - src.preprocessing - INFO - Missing values (raw data): none
+2026-09-21 02:01:40,137 - src.preprocessing - INFO - Missing values (after converting TotalCharges):
+TotalCharges    11
+2026-09-21 02:01:40,185 - src.preprocessing - INFO - Removed duplicates: 22
+2026-09-21 02:01:40,188 - src.preprocessing - INFO - Removed rows with missing values: 11
+2026-09-21 02:01:40,324 - src.preprocessing - INFO - Preprocessing completed
+2026-09-21 02:01:40,324 - src.preprocessing - INFO - X shape: (7010, 26)
+2026-09-21 02:01:40,324 - src.preprocessing - INFO - y shape: (7010,)
+2026-09-21 02:01:40,324 - src.preprocessing - INFO - Categorical columns (not scaled): ['gender', 'Partner', 'Dependents', 'PhoneService', 'PaperlessBilling', 'MultipleLines', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'InternetService_DSL', 'InternetService_Fiber optic', 'InternetService_No', 'Contract_Month-to-month', 'Contract_One year', 'Contract_Two year', 'PaymentMethod_Bank transfer (automatic)', 'PaymentMethod_Credit card (automatic)', 'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check']
+2026-09-21 02:01:40,325 - src.preprocessing - INFO - Columns to scale (4): ['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges']
+2026-09-21 02:01:40,325 - src.preprocessing - INFO - Columns not scaled (22): ['gender', 'Partner', 'Dependents', 'PhoneService', 'PaperlessBilling', 'MultipleLines', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'InternetService_DSL', 'InternetService_Fiber optic', 'InternetService_No', 'Contract_Month-to-month', 'Contract_One year', 'Contract_Two year', 'PaymentMethod_Bank transfer (automatic)', 'PaymentMethod_Credit card (automatic)', 'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check']
+2026-09-21 02:01:40,347 - src.preprocessing - INFO - Train shape: (5608, 26), test shape: (1402, 26)
+2026-09-21 02:01:40,353 - src.preprocessing - INFO - Scaling completed (numeric columns only)
+2026-09-21 02:01:40,536 - src.train - INFO - Trained Logistic Regression in 0.18s
+2026-09-21 02:01:40,551 - src.train - INFO - Evaluated Logistic Regression | accuracy=0.7397 | precision=0.4610 | recall=0.8100 | f1=0.5876 | roc_auc=0.8516
+2026-09-21 02:01:41,856 - src.train - INFO - Trained Random Forest in 0.53s
+2026-09-21 02:01:41,933 - src.train - INFO - Evaluated Random Forest | accuracy=0.7639 | precision=0.4898 | recall=0.7445 | f1=0.5909 | roc_auc=0.8421
+2026-09-21 02:01:43,695 - src.train - INFO - Trained Gradient Boosting in 1.19s
+2026-09-21 02:01:43,705 - src.train - INFO - Evaluated Gradient Boosting | accuracy=0.7561 | precision=0.4804 | recall=0.8006 | f1=0.6005 | roc_auc=0.8511
+2026-09-21 02:01:48,281 - src.train - INFO - Trained SVM (RBF) in 4.12s
+2026-09-21 02:01:48,527 - src.train - INFO - Evaluated SVM (RBF) | accuracy=0.7946 | precision=0.5433 | recall=0.6449 | f1=0.5897 | roc_auc=0.8209
+2026-09-21 02:01:48,853 - src.train - INFO - Best model by roc_auc: Logistic Regression (0.8516)
