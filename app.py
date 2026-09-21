@@ -94,13 +94,14 @@ def train_tab():
     with st.expander("Console output"):
         st.code(output, language="text")
 
-    pngs = sorted(PLOTS_DIR.glob("*.png"))
-    if pngs:
-        st.subheader("Plots")
-        for i in range(0, len(pngs), 2):
-            cols = st.columns(2)
-            for col, path in zip(cols, pngs[i : i + 2]):
-                col.image(str(path), caption=path.name)
+    if show_plots:
+        pngs = sorted(PLOTS_DIR.glob("*.png"))
+        if pngs:
+            st.subheader("Plots")
+            for i in range(0, len(pngs), 2):
+                cols = st.columns(2)
+                for col, path in zip(cols, pngs[i : i + 2]):
+                    col.image(str(path), caption=path.name)
 
 
 # Predict tab
