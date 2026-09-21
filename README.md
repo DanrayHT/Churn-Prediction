@@ -61,7 +61,6 @@ pip install -r requirements.txt
 
 Dependencies: `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `streamlit`, and `kagglehub` (used only to auto-download the dataset).
 
-> **Note:** Auto-downloading from Kaggle requires a Kaggle account with API credentials configured (`kagglehub`). If you already have `data/telco_churn.csv`, no Kaggle setup is needed.
 
 ---
 
