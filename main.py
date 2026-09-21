@@ -1,16 +1,3 @@
-"""Telco churn pipeline.
-
-Training (default command):
-    python main.py
-    python main.py --metric f1 --show-plots
-    python main.py --preprocessing load --feature-engineering load
-
-Prediction:
-    python main.py predict                        # type each field by hand (interactive)
-    python main.py predict --file customers.csv   # CSV or JSON with one or more customers
-    python main.py predict --json '{"gender": "Female", "tenure": 3, ...}'
-"""
-
 import argparse
 import configparser
 import json
