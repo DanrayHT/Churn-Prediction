@@ -1,6 +1,6 @@
 # Telco Customer Churn Prediction
 
-A machine-learning pipeline that predicts whether a telecom customer is likely to **churn**. It trains several models on the [Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) dataset, picks the best one by a configurable metric, and lets you make predictions — either from the command line or through a Streamlit web app.
+A machine-learning pipeline that predicts whether a telecom customer is likely to **churn**. It trains several models on the [Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) dataset, picks the best one by a configurable metric, and lets you make predictions - either from the command line or through a Streamlit web app.
 
 > **Live demo:** try the hosted app at
 > <https://churn-prediction-ickvyn82vhxmaam9rby3fu.streamlit.app/>
@@ -9,11 +9,11 @@ A machine-learning pipeline that predicts whether a telecom customer is likely t
 
 ## Features
 
-- **End-to-end pipeline** — load → clean/preprocess → feature engineering → train → evaluate → predict.
+- **End-to-end pipeline** - load → clean/preprocess → feature engineering → train → evaluate → predict.
 - **Four models compared automatically:** Logistic Regression, Random Forest, Gradient Boosting, and SVM (RBF). All are class-balanced to handle the imbalanced churn target.
 - **Best-model selection** by any of: `accuracy`, `precision`, `recall`, `f1`, or `roc_auc`.
 - **Two ways to use it:** a CLI (`main.py`) and a Streamlit web app (`app.py`).
-- **Reproducible & configurable** — every knob lives in `src/config.ini`; trained artifacts are pickled so you can skip retraining.
+- **Reproducible & configurable** - every knob lives in `src/config.ini`; trained artifacts are pickled so you can skip retraining.
 - **Auto-downloads the dataset** from Kaggle on first run if it isn't present locally.
 
 ---
@@ -61,7 +61,6 @@ pip install -r requirements.txt
 
 Dependencies: `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `streamlit`, and `kagglehub` (used only to auto-download the dataset).
 
-
 ---
 
 ## Configuration
@@ -95,15 +94,15 @@ decision_threshold = 0.5          # churn probability >= this => "Churn"
 
 ## How it works
 
-1. **Load data** — reads `data/telco_churn.csv` (downloads from Kaggle if absent) and verifies the target column exists.
+1. **Load data** - reads `data/telco_churn.csv` (downloads from Kaggle if absent) and verifies the target column exists.
 2. **Preprocessing** (`src/preprocessing.py`)
    - Converts `TotalCharges` to numeric, drops `customerID`, removes duplicates, and drops rows with missing values.
    - Encodes binary/service columns (`Yes/No`, `Male/Female`, etc.) as 0/1.
    - One-hot encodes the remaining categorical columns (e.g., `InternetService`, `Contract`, `PaymentMethod`).
    - Maps the target `Churn` from `Yes/No` to `1/0`.
-3. **Feature engineering** — performs a stratified train/test split (`test_size=0.2`) and applies `StandardScaler` to numeric columns only (categoricals are left unscaled).
-4. **Training & evaluation** (`src/train.py`) — trains all four models, computes accuracy / precision / recall / F1 / ROC-AUC on the test set, and saves per-model report plots (confusion matrix, ROC curve, precision-recall curve, feature importance) to `save/plots/`.
-5. **Best model selection** — picks the top model by the configured metric and saves it to `save/best_model.pkl`.
+3. **Feature engineering** - performs a stratified train/test split (`test_size=0.2`) and applies `StandardScaler` to numeric columns only (categoricals are left unscaled).
+4. **Training & evaluation** (`src/train.py`) - trains all four models, computes accuracy / precision / recall / F1 / ROC-AUC on the test set, and saves per-model report plots (confusion matrix, ROC curve, precision-recall curve, feature importance) to `save/plots/`.
+5. **Best model selection** - picks the top model by the configured metric and saves it to `save/best_model.pkl`.
 
 ### Models
 
@@ -139,7 +138,7 @@ Training options:
 | `--feature-engineering` | `rerun`, `load` | Rerun or load the saved feature engineer |
 | `--model` | `rerun`, `load` | Retrain models or just load the saved best model |
 | `--metric` | `accuracy`, `precision`, `recall`, `f1`, `roc_auc` | Metric used to select the best model |
-| `--show-plots` | — | Display plots in a window (they're always also saved as PNG) |
+| `--show-plots` | - | Display plots in a window (they're always also saved as PNG) |
 
 ### Predict
 
@@ -179,8 +178,8 @@ streamlit run app.py
 
 Then open <http://localhost:8501> in your browser. The app has two tabs:
 
-- **Train** — choose the preprocessing / feature-engineering / model mode, the selection metric, and whether to show plots on screen. Clicking **Train** runs the full pipeline, shows the captured console output, and displays the generated report plots.
-- **Predict** — set a decision-threshold slider and pick an input source (**Form**, **File upload**, or **JSON**). It returns each customer's churn probability and verdict (Churn / Stay), plus a button to download the results as CSV.
+- **Train** - choose the preprocessing / feature-engineering / model mode, the selection metric, and whether to show plots on screen. Clicking **Train** runs the full pipeline, shows the captured console output, and displays the generated report plots.
+- **Predict** - set a decision-threshold slider and pick an input source (**Form**, **File upload**, or **JSON**). It returns each customer's churn probability and verdict (Churn / Stay), plus a button to download the results as CSV.
 
 > The hosted version of this app is available at
 > <https://churn-prediction-ickvyn82vhxmaam9rby3fu.streamlit.app/>.
@@ -191,8 +190,8 @@ Then open <http://localhost:8501> in your browser. The app has two tabs:
 
 After training, you'll find in `save/`:
 
-- `preprocessor.pkl`, `feature_engineer.pkl`, `best_model.pkl` — reusable fitted artifacts.
-- `plots/*.png` — per-model reports and a model-comparison chart.
+- `preprocessor.pkl`, `feature_engineer.pkl`, `best_model.pkl` - reusable fitted artifacts.
+- `plots/*.png` - per-model reports and a model-comparison chart.
 
 Runtime details are logged to `logs/app.log`.
 
